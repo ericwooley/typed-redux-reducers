@@ -1,0 +1,28 @@
+{
+  "name": "typed-redux-reducers",
+  "description": null,
+  "version": "0.0.1",
+  "main": "dist/reducerTypes.js",
+  "files": "dist",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.28",
+    "@types/react-dom": "15.5.4",
+    "@types/react-redux": "5.0.13",
+    "@types/redux": "3.6.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-redux": "^5.0.6",
+    "react-scripts-ts": "2.6.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "prepublish": "tsc -p tsconfig.dist.json",
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  }
+}
