@@ -4,6 +4,7 @@
   "repository": "https://github.com/ericwooley/typed-redux-reducers",
   "version": "0.0.1",
   "main": "dist/reducerTypes.js",
+  "types": "./dist/reducerTypes.d.ts",
   "files": "dist",
   "dependencies": {},
   "devDependencies": {
