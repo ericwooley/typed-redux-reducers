@@ -2,7 +2,7 @@
   "name": "typed-redux-reducers",
   "description": "Redux utils and types to keep your reducers type safe.",
   "repository": "https://github.com/ericwooley/typed-redux-reducers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/reducerTypes.js",
   "types": "./dist/reducerTypes.d.ts",
   "files": "dist",
