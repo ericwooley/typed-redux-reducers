@@ -86,3 +86,7 @@ let store = createStore(
 )
 export default store
 ```
+
+## If you really want to see it works, the demo for this app is...
+
+[here](https://ericwooley.github.io/typed-redux-reducers/)

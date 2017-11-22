@@ -2,6 +2,7 @@
   "name": "typed-redux-reducers",
   "description": "Redux utils and types to keep your reducers type safe.",
   "repository": "https://github.com/ericwooley/typed-redux-reducers",
+  "homepage": "https://ericwooley.github.io/typed-redux-reducers/",
   "version": "0.0.2",
   "main": "dist/reducerTypes.js",
   "types": "dist/reducerTypes.d.ts",
@@ -13,6 +14,7 @@
     "@types/react-dom": "15.5.4",
     "@types/react-redux": "5.0.13",
     "@types/redux": "3.6.0",
+    "gh-pages": "^1.1.0",
     "react": "16.0.0",
     "react-dom": "16.0.0",
     "react-redux": "^5.0.6",
@@ -21,6 +23,8 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "prepublish": "tsc -p tsconfig.dist.json",
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
