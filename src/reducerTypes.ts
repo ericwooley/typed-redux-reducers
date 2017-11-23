@@ -5,19 +5,16 @@ export interface IAction<T = undefined> {
 export type ActionHandler<S, T> = (state: S, action: IAction<T>) => S
 export type ActionBundle<S, T> = {
   type: string
-  actionCreator: (payload: T) => IAction<T> | (() => Promise<IAction<T>>)
+  actionCreator: (payload: T) => IAction<T>
   handler: ActionHandler<S, T>
 }
 export function actionFactory<S, T>(
   type: string,
-  handler: (state: S, action: IAction<T>) => S,
-  customActionCreator?: () => (...arg: any[]) => Promise<IAction<T>>
+  handler: (state: S, action: IAction<T>) => S = (state, action) => state
 ): ActionBundle<S, T> {
   return {
     type,
-    actionCreator: customActionCreator
-      ? customActionCreator
-      : (payload: T) => ({ type, payload }),
+    actionCreator: (payload: T) => ({ type, payload }),
     handler
   }
 }

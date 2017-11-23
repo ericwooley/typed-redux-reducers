@@ -16,25 +16,16 @@ export const actionBundles = {
         ...state,
         count: state.count - action.payload
     })),
-    asyncIncrement: actionFactory<IState, number>(
-        CounterTypes.ASYNC_INCREMENT,
-        (state: IState, action: IAction<number>) => ({
-            ...state,
-            count: state.count + action.payload
-        }),
-        // Thunk support
-        (count: number = 2) =>
-            (dispatch: any, getState: any) =>
-            new Promise<IAction<number>>((resolve) =>
-                setTimeout(
-                    () => resolve(dispatch({type: CounterTypes.ASYNC_INCREMENT, payload: count})),
-                    1000
-                )
-            )
-    )
 }
 export const actionCreators = {
   increment: actionBundles.increment.actionCreator,
   decrement: actionBundles.decrement.actionCreator,
-  asyncIncrement: actionBundles.asyncIncrement.actionCreator
+  asyncIncrement: (count: number = 2) =>
+          (dispatch: any, getState: any) =>
+          new Promise<IAction<number>>((resolve) =>
+              setTimeout(
+                  () => resolve(dispatch(actionCreators.increment(count))),
+                  1000
+              )
+          )
 }
