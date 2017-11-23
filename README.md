@@ -5,7 +5,7 @@ creators type safe.
 
 ## Installtion
 
-`npm install typed-redux-reducers` or `yarn typed-redux-reducers`
+`npm install typed-redux-reducers` or `yarn add typed-redux-reducers`
 
 ## usage
 
